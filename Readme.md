@@ -1,5 +1,10 @@
 # Lumea - Health Monitoring App
 
+> An Android app that measures your heart rate, SpO2, and respiratory rate with your phone camera, and shares your health status with the people who care about you.
+
+> [!NOTE]
+> **This repository is a fork.** The original project lives at **[mzaki9/Atomus-Lumea](https://github.com/mzaki9/Atomus-Lumea)**. Please refer to the original repo for the canonical source, issues, and updates. The backend is at [mzaki9/lumea-backend](https://github.com/mzaki9/lumea-backend).
+
 Lumea is an innovative mobile health monitoring application designed to empower users in managing their well-being more proactively. By utilizing advanced imaging and data analysis, Lumea enables users to measure key vital signs such as heart rate and respiratory rate directly through their smartphone camera. The app also facilitates secure sharing of real-time health information with selected family members, friends, or caregivers, fostering a stronger support system. With intuitive dashboards and historical tracking, users can monitor their health patterns over time, gain personalized insights, and make informed lifestyle decisions. Lumea redefines everyday health monitoring by making it accessible, connected, and insight-driven.
 
 ## Features
@@ -82,8 +87,24 @@ Health metrics are visualized over time using interactive line charts
 
 ## Getting Started
 
-### How to use
-Simply download the apk in apk folder
+### Install the APK (quickest)
+
+1. Download [`apk/lumea.apk`](apk/lumea.apk) to an Android device (Android 9 / API 28 or newer).
+2. Open the file and allow installs from unknown sources if prompted.
+3. Launch Lumea, sign up, and start a measurement from the home screen by covering the rear camera and flash with your fingertip.
+
+### Build from source
+
+Requirements: Android Studio (or the Android SDK) and JDK 11+.
+
+```bash
+git clone https://github.com/mzaki9/Atomus-Lumea.git
+cd Atomus-Lumea
+./gradlew assembleDebug
+# APK output: app/build/outputs/apk/debug/app-debug.apk
+```
+
+Or open the project in Android Studio and run the `app` configuration on a device or emulator. The app talks to the [Lumea backend](https://github.com/mzaki9/lumea-backend), so it needs that service to be reachable.
 
 ## License
 
@@ -104,7 +125,10 @@ Lumea was developed by Team FindIT, consisting of:
 - **Albert Ghazaly** - [GitHub](https://github.com/albertghazaly)
 
 ## Video Demo
-https://drive.google.com/file/d/1nQ-HL-KpSHWRhhWlJmOrGTgX4wmotsfv/view?usp=drive_link
 
-## Backend Repository
-https://github.com/mzaki9/lumea-backend
+[Watch the demo on Google Drive](https://drive.google.com/file/d/1nQ-HL-KpSHWRhhWlJmOrGTgX4wmotsfv/view?usp=drive_link)
+
+## Related Repositories
+
+- **Original app repository:** https://github.com/mzaki9/Atomus-Lumea
+- **Backend repository:** https://github.com/mzaki9/lumea-backend
